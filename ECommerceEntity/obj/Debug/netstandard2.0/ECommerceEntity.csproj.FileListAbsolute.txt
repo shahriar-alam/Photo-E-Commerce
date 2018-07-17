@@ -1,9 +1,0 @@
-D:\ASP\E-Commerce\ECommerceEntity\bin\Debug\netstandard2.0\ECommerceEntity.deps.json
-D:\ASP\E-Commerce\ECommerceEntity\bin\Debug\netstandard2.0\ECommerceEntity.dll
-D:\ASP\E-Commerce\ECommerceEntity\bin\Debug\netstandard2.0\ECommerceEntity.pdb
-D:\ASP\E-Commerce\ECommerceEntity\obj\Debug\netstandard2.0\ECommerceEntity.csprojAssemblyReference.cache
-D:\ASP\E-Commerce\ECommerceEntity\obj\Debug\netstandard2.0\ECommerceEntity.csproj.CoreCompileInputs.cache
-D:\ASP\E-Commerce\ECommerceEntity\obj\Debug\netstandard2.0\ECommerceEntity.AssemblyInfoInputs.cache
-D:\ASP\E-Commerce\ECommerceEntity\obj\Debug\netstandard2.0\ECommerceEntity.AssemblyInfo.cs
-D:\ASP\E-Commerce\ECommerceEntity\obj\Debug\netstandard2.0\ECommerceEntity.dll
-D:\ASP\E-Commerce\ECommerceEntity\obj\Debug\netstandard2.0\ECommerceEntity.pdb
