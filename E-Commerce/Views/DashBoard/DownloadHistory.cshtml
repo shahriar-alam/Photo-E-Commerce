@@ -1,0 +1,168 @@
+﻿@model IEnumerable<ECEntity.Transaction>
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload History</title>
+    <link rel="stylesheet" type="text/css" href="~/css/Homedesign.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/css/test.css">
+    <link rel="stylesheet" type="text/css" href="~/css/header.css">
+    <link rel="stylesheet" type="text/css" href="~/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="~/css/footer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+
+    <header class="header">
+        <div>
+            <nav>
+                <ul class="header_ul">
+                    <li><a href="@Url.Action("Home", "Home")"><i class="fa fa-home" aria-hidden="true" style="color: white"></i></a></li>
+                    <li>
+                        <a href="@Url.Action("ViewProfile", "Dashboard")"><i class="fa fa-tachometer" aria-hidden="true" style="color: white"></i></a>
+                    </li>
+                    <li><a href="@Url.Action("Chart", "Dashboard")"><i class="fa fa-bar-chart" aria-hidden="true" style="color: white"></i></a></li>
+                    <li><a href="@Url.Action("Logout", "Dashboard")"><i class="fa fa-sign-out" aria-hidden="true" style="color: white"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <menu class="home">
+        <div>
+            <nav class="bar">
+                <ul></ul>
+                <ul>
+                    <li><font color="#444141" face="Impact" style="margin:15" size="4"></font></li>
+                    <li class="menu_font">
+                        <a href="@Url.Action("Home2", "Home", new { tags = "Nature" } )"><font color="#444141" face="Impact" style="margin:15" size="3"><u>Nature</u></font></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Home2", "Home", new { tags = "Digital Art" } )"><font color="#444141" face="Impact" style="margin:15" size="3"><u>Digital Art</u></font></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Home2", "Home", new { tags = "Film & Animation" } )"><font color="#444141" face="Impact" style="margin:15" size="3"><u>Film & Animation</u></font></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Home2", "Home", new { tags = "Design" } )"><font color="#444141" face="Impact" style="margin:15" size="3"><u>Design</u></font></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Home2", "Home", new { tags = "Cartoon" } )"><font color="#444141" face="Impact" style="margin:15" size="3"><u>Cartoon</u></font></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Home2", "Home", new { tags = "Anime" } )"><font color="#444141" face="Impact" style="margin:15" size="3"><u>Anime</u></font></a>
+                    </li>
+                    <hr>
+                </ul>
+            </nav>
+        </div>
+    </menu>
+
+    <hr class="hr_border"><br>
+    <section>
+        <div class="wrapper">
+            <div id="profile">
+                <div class="left-bar">
+
+                    <div style=" margin:5px; margin-left:90px">
+                        <img class="img-circle" src="~/raw/propic.jpg" style="margin:15px">
+                    </div>
+                    <h1 style="color: antiquewhite">@ViewBag.user.FullName</h1>
+                    <hr>
+                    <nav>
+                        <ul style="background-color:#444141;">
+                            <li><a href="@Url.Action("ViewProfile", "Dashboard" )"><i class="fa fa-user" aria-hidden="true" style="margin:10px"><font face="Arial" style="margin:10px">View Profile</font></i></a></li>
+                            <li><a href="@Url.Action("UploadHistory", "Dashboard" )"><i class="fa fa-upload" aria-hidden="true" style="margin:10px"><font face="Arial" style="margin:10px">Upload History</font></i></a></li>
+                            <li><a href="@Url.Action("DownloadHistory", "Dashboard" )"><i class="fa fa-download" aria-hidden="true" style="margin:10px"><font face="Arial" style="margin:10px">Download History</font></i></a></li>
+                            <li><a href="@Url.Action("EditProfile", "Dashboard" )"><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin:10px"><font face="Arial" style="margin:10px">Edit Profile</font></i></a></li>
+                            <li><a href="@Url.Action("Logout", "Dashboard" )"><i class="fa fa-sign-out" aria-hidden="true" style="margin:10px"><font face="Arial" style="margin:10px">Logout</font></i></a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class="right-bar">
+
+
+
+                    <div class="cartTable" style="height: 90%; overflow: auto">
+                        <font face="Arial" color="#444141" size="5"><b style="position: relative; bottom: 50">Downloaded Contents</b></font>
+                        <table id="" width="600px" height="100px" border="0" style="position: relative; bottom: 50 ">
+
+                            <form action="">
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td>
+                                        <img src="@Url.Content("~/Images/"+item.ItemId+".jpg")" height="150px" width="150px" style="margin:15" class="btn-social">
+                                    </td>
+                                    <td>
+                                        <h3>Item ID</h3>
+                                        <label>@Html.DisplayFor(model => item.ItemId)</label>
+                                    </td>
+                                    <!--<td>
+                                                <h3>Item Name</h3>
+                                                <label>Html.DisplayFor(model => item.Stash.StashName)</label>
+                                            </td>-->
+
+
+                                    <td>
+                                        <h3>Transaction Date</h3>
+                                        <label>@Html.DisplayFor(model => item.TransactionDate)</label>
+                                    </td>
+
+                                    <td>
+                                        <h3>Price</h3>
+                                        <label>@Html.DisplayFor(model => item.ItemPrice)</label>
+                                    </td>
+
+                                    <td>
+                                        <h3>Download</h3>
+                                        <input type="button" class="btn btn-info" value="Download" onclick="location.href='@Url.Action("Download_Item", "Dashboard", new { filename =item.ItemId.ToString()+".jpg" })'" />
+                                    </td>
+
+                                    <br>
+                                </tr>
+                                    <br><br>
+                                }
+                            </form>
+
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br><br><br><br>
+    <footer style="clear: both">
+        <div class="left_footer" style="text-align: right">
+            <font face="Arial Black" color="white" style="margin:5; font-size: 15">&copy;COPYRIGHT</font>
+        </div>
+
+        <div class="right_footer">
+            <img src="~/Icon/facebook.png" height="30px" width="30px" style="margin:15">
+            <img src="~/Icon/google.png" height="30px" width="30px" style="margin:15">
+            <img src="~/Icon/twitter.png" height="30px" width="30px" style="margin:15">
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+D:\ASP\E-Commerce\ECommerceRepository\bin\Debug\netstandard2.0\ECommerceRepository.deps.json
+D:\ASP\E-Commerce\ECommerceRepository\bin\Debug\netstandard2.0\ECommerceRepository.dll
+D:\ASP\E-Commerce\ECommerceRepository\bin\Debug\netstandard2.0\ECommerceRepository.pdb
+D:\ASP\E-Commerce\ECommerceRepository\bin\Debug\netstandard2.0\ECommerceEntity.dll
+D:\ASP\E-Commerce\ECommerceRepository\bin\Debug\netstandard2.0\ECommerceEntity.pdb
+D:\ASP\E-Commerce\ECommerceRepository\obj\Debug\netstandard2.0\ECommerceRepository.csprojAssemblyReference.cache
+D:\ASP\E-Commerce\ECommerceRepository\obj\Debug\netstandard2.0\ECommerceRepository.csproj.CoreCompileInputs.cache
+D:\ASP\E-Commerce\ECommerceRepository\obj\Debug\netstandard2.0\ECommerceRepository.AssemblyInfoInputs.cache
+D:\ASP\E-Commerce\ECommerceRepository\obj\Debug\netstandard2.0\ECommerceRepository.AssemblyInfo.cs
+D:\ASP\E-Commerce\ECommerceRepository\obj\Debug\netstandard2.0\ECommerceRepository.csproj.CopyComplete
+D:\ASP\E-Commerce\ECommerceRepository\obj\Debug\netstandard2.0\ECommerceRepository.dll
+D:\ASP\E-Commerce\ECommerceRepository\obj\Debug\netstandard2.0\ECommerceRepository.pdb

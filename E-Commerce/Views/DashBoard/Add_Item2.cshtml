@@ -1,0 +1,149 @@
+﻿@model ECEntity.Stash
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload History</title>
+    <link rel="stylesheet" type="text/css" href="~/css/Homedesign.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/css/test.css">
+    <link rel="stylesheet" type="text/css" href="~/css/header.css">
+    <link rel="stylesheet" type="text/css" href="~/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="~/css/footer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+
+    <header class="header">
+        <div>
+            <nav>
+                <ul class="header_ul">
+                    <li><a href="@Url.Action("Home", "Home")"><i class="fa fa-home" aria-hidden="true" style="color: white"></i></a></li>
+                    <li>
+                        <a href="@Url.Action("ViewProfile", "Dashboard")"><i class="fa fa-tachometer" aria-hidden="true" style="color: white"></i></a>
+                    </li>
+                    <li><a href="@Url.Action("Chart", "Dashboard")"><i class="fa fa-bar-chart" aria-hidden="true" style="color: white"></i></a></li>
+                    <li><a href="@Url.Action("Logout", "Dashboard")"><i class="fa fa-sign-out" aria-hidden="true" style="color: white"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <body>
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <br><br><br><br>
+            <hr class="hr_border"><br>
+            <section>
+                <div class="wrapper">
+                    <div class="form">
+                        <form action="" method="POST">
+                            <fieldset id="signup-form">
+                                <legend>Add Item</legend>
+                                <img src="~/raw/product.png" alt="Item Picture" height="250" width="250"> <br>
+                                <label for="file">Filename:</label>
+                                <input type="file" name="file" id="file" />
+                                <br>
+                                @Html.EditorFor(model => model.StashName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.StashName, "", new { @class = "text-danger" })
+                                <hr>
+
+                                <div class="itemcontainer">
+                                    <div style=" margin-left: 50px;">
+                                        @{
+                                            List<SelectListItem> listItems = new List<SelectListItem>();
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "Nature",
+                                                Value = "Nature"
+                                            });
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "Anime",
+                                                Value = "Anime",
+                                                Selected = true
+                                            });
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "Cartoon",
+                                                Value = "Cartoon"
+                                            });
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "Digital Art",
+                                                Value = "Digital Art"
+                                            });
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "Film & Animation",
+                                                Value = "Film & Animation",
+                                                Selected = true
+                                            });
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "Miscellaneous",
+                                                Value = "Miscellaneous"
+                                            });
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "Design",
+                                                Value = "Design"
+                                            });
+
+                                        }
+                                        @Html.DropDownListFor(model => model.Tags, listItems, "-- Select Tag --")
+                                    </div>
+
+                                </div>
+
+                                <br><br>
+                                <div class="itemcontainer">
+
+                                    <div>
+                                        Selling Price
+                                        @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                                    </div>
+
+                                </div>
+                                <br>
+
+                                <br><br>
+
+                                <input type="submit" value="Create" class="btn btn-info" />
+                                <button type="reset">Reset</button>
+                                <input type="button" class="btn btn-info" value="Back" onclick="location.href='@Url.Action("UploadHistory", "Dashboard")'" />
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        }
+
+
+    </body>
+    <br><br><br><br>
+    <footer style="clear: both">
+        <div class="left_footer" style="text-align: right">
+            <font face="Arial Black" color="white" style="margin:5; font-size: 15">&copy;COPYRIGHT</font>
+        </div>
+
+        <div class="right_footer">
+            <img src="~/Icon/facebook.png" height="30px" width="30px" style="margin:15">
+            <img src="~/Icon/google.png" height="30px" width="30px" style="margin:15">
+            <img src="~/Icon/twitter.png" height="30px" width="30px" style="margin:15">
+        </div>
+    </footer>
+</body>
+</html>

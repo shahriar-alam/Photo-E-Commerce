@@ -1,0 +1,7 @@
+-checkout shared session instead of current session.
+-validate login page
+-add item-name,tags in downloads
+-complete password edit
+-update menubar
+-update pages
+-add chart page

@@ -1,0 +1,12 @@
+D:\ASP\E-Commerce\ECEntity\bin\Debug\ECEntity.dll.config
+D:\ASP\E-Commerce\ECEntity\bin\Debug\ECEntity.dll
+D:\ASP\E-Commerce\ECEntity\bin\Debug\ECEntity.pdb
+D:\ASP\E-Commerce\ECEntity\bin\Debug\EntityFramework.dll
+D:\ASP\E-Commerce\ECEntity\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP\E-Commerce\ECEntity\bin\Debug\EntityFramework.xml
+D:\ASP\E-Commerce\ECEntity\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP\E-Commerce\ECEntity\obj\Debug\ECEntity.csproj.CoreCompileInputs.cache
+D:\ASP\E-Commerce\ECEntity\obj\Debug\ECEntity.csproj.CopyComplete
+D:\ASP\E-Commerce\ECEntity\obj\Debug\ECEntity.dll
+D:\ASP\E-Commerce\ECEntity\obj\Debug\ECEntity.pdb
+D:\ASP\E-Commerce\ECEntity\obj\Debug\ECEntity.csprojAssemblyReference.cache
